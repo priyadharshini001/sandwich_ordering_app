@@ -1,0 +1,4 @@
+#Sat Oct 10 15:55:53 IST 2020
+base.0=C\:\\Users\\PREETHI\\AndroidStudioProjects\\Food_ordering_app\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

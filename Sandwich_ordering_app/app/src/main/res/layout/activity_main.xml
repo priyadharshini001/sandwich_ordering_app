@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+	
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/banner"/>
+
+    <TextView
+        android:id="@+id/menuTv"
+        android:layout_width="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_height="51dp"
+        android:fontFamily="@font/myfont"
+        android:text="Menu"
+        android:textColor="#43596f"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        />
+
+    <ScrollView
+
+        android:id="@+id/myScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="800dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1">
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/vegsp_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/vegsp" />
+
+                    <TextView
+                        android:id="@+id/vegsp_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/vegsp_photo"
+                        android:text="Veg Sandwich"
+						android:textStyle="bold"
+                        android:textColor="@color/dark_black"
+                       android:fontFamily="@font/stan"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/vegsp_price"
+                        android:fontFamily="@font/gatholic"
+                        android:textColor="@color/colorAccent"
+                        android:text="Rs 40"
+                        android:layout_toRightOf="@id/vegsp_photo"
+                        android:layout_below="@id/vegsp_textView"
+                        />
+
+                    <Button
+                        android:id="@+id/vegsp_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/vegsp_button"
+                        android:layout_marginLeft="200dp"
+
+                        android:layout_toLeftOf="@id/vegsp_button"
+                        android:background="@drawable/dlt"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/vegsp_button"
+                        android:layout_width="40dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/heart_button"
+                        android:onClick="add_to_list"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/veggcheese_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/veggcheese" />
+
+                    <TextView
+                        android:id="@+id/veggcheese_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/veggcheese_photo"
+                        android:text="Veg cheese grilled"
+						android:textStyle="bold"
+                        android:textColor="@color/dark_black"
+                        android:fontFamily="@font/stan"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/veggcheese_price"
+                        android:fontFamily="@font/gatholic"
+                        android:textColor="@color/colorAccent"
+                        android:text="Rs 60"
+                        android:layout_toRightOf="@id/veggcheese_photo"
+                        android:layout_below="@id/veggcheese_textView"
+                        />
+
+                    <Button
+                        android:id="@+id/veggcheese_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/veggcheese_button"
+                        android:layout_marginLeft="80dp"
+
+                        android:layout_toLeftOf="@id/veggcheese_button"
+                        android:background="@drawable/dlt"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/veggcheese_button"
+                        android:layout_width="40dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/heart_button"
+                        android:onClick="add_to_list"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/clubcheese_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/clubcheese" />
+
+                    <TextView
+                        android:id="@+id/clubcheese_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/clubcheese_photo"
+                        android:text="Club cheese"
+						android:textStyle="bold"
+                        android:textColor="@color/dark_black"
+                        android:fontFamily="@font/stan"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/clubcheese_price"
+                        android:fontFamily="@font/gatholic"
+                        android:textColor="@color/colorAccent"
+                        android:text="Rs 90"
+                        android:layout_toRightOf="@id/clubcheese_photo"
+                        android:layout_below="@id/clubcheese_textView"
+                        />
+
+                    <Button
+                        android:id="@+id/clubcheese_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/clubcheese_button"
+                        android:layout_marginLeft="80dp"
+
+                        android:layout_toLeftOf="@id/clubcheese_button"
+                        android:background="@drawable/dlt"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+
+                    <Button
+                        android:id="@+id/clubcheese_button"
+                        android:layout_width="40dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/heart_button"
+                        android:onClick="add_to_list"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/garliccheese_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/garliccheese" />
+
+                    <TextView
+                        android:id="@+id/garliccheese_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/garliccheese_photo"
+                        android:text="Garlic cheese"
+						android:textStyle="bold"
+                        android:textColor="@color/dark_black"
+                        android:fontFamily="@font/stan"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/garliccheese_price"
+                        android:fontFamily="@font/gatholic"
+                        android:textColor="@color/colorAccent"
+                        android:text="Rs 80"
+                        android:layout_toRightOf="@id/garliccheese_photo"
+                        android:layout_below="@id/garliccheese_textView"
+                        />
+
+                    <Button
+                        android:id="@+id/garliccheese_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/garliccheese_button"
+                        android:layout_marginLeft="80dp"
+
+                        android:layout_toLeftOf="@id/garliccheese_button"
+                        android:background="@drawable/dlt"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+
+                    <Button
+                        android:id="@+id/garliccheese_button"
+                        android:layout_width="40dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/heart_button"
+                        android:onClick="add_to_list"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cv5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/layscheese_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/layscheese" />
+
+                    <TextView
+                        android:id="@+id/layscheese_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/layscheese_photo"
+                        android:text="Lays cheese"
+						android:textStyle="bold"
+                        android:textColor="@color/dark_black"
+                        android:fontFamily="@font/stan"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layscheese_price"
+                        android:fontFamily="@font/gatholic"
+                        android:textColor="@color/colorAccent"
+                        android:text="Rs 90"
+                        android:layout_toRightOf="@id/layscheese_photo"
+                        android:layout_below="@id/layscheese_textView"
+                        />
+
+                    <Button
+                        android:id="@+id/layscheese_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/layscheese_button"
+                        android:layout_marginLeft="8dp"
+
+                        android:layout_toLeftOf="@id/layscheese_button"
+                        android:background="@drawable/dlt"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+
+                    <Button
+                        android:id="@+id/layscheese_button"
+                        android:layout_width="40dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/heart_button"
+                        android:onClick="add_to_list"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cv6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/mushroomcheese_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/mushroomcheese" />
+
+                    <TextView
+                        android:id="@+id/mushroomcheese_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/mushroomcheese_photo"
+                        android:text="Mushroom cheese"
+						android:textStyle="bold"
+                        android:textColor="@color/dark_black"
+                        android:fontFamily="@font/stan"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mushroomcheese_price"
+                        android:fontFamily="@font/gatholic"
+                        android:textColor="@color/colorAccent"
+                        android:text="Rs 80"
+                        android:layout_toRightOf="@id/mushroomcheese_photo"
+                        android:layout_below="@id/mushroomcheese_textView"
+                        />
+
+                    <Button
+                        android:id="@+id/mushroomcheese_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/mushroomcheese_button"
+                        android:layout_marginLeft="80dp"
+
+                        android:layout_toLeftOf="@id/mushroomcheese_button"
+                        android:background="@drawable/dlt"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/mushroomcheese_button"
+                        android:layout_width="40dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/heart_button"
+                        android:onClick="add_to_list"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+			
+			<android.support.v7.widget.CardView
+
+                android:id="@+id/cv7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="6"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/chickencheese_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/chickencheese" />
+
+                    <TextView
+                        android:id="@+id/chickencheese_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/chickencheese_photo"
+                        android:text="Chicken cheese"
+						android:textStyle="bold"
+                        android:textColor="@color/dark_black"
+                        android:fontFamily="@font/stan"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chickencheese_price"
+                        android:fontFamily="@font/gatholic"
+                        android:textColor="@color/colorAccent"
+                        android:text="Rs 90"
+                        android:layout_toRightOf="@id/chickencheese_photo"
+                        android:layout_below="@id/chickencheese_textView"
+                        />
+
+                    <Button
+                        android:id="@+id/chickencheese_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/chickencheese_button"
+                        android:layout_marginLeft="80dp"
+
+                        android:layout_toLeftOf="@id/chickencheese_button"
+                        android:background="@drawable/dlt"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/chickencheese_button"
+                        android:layout_width="40dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/heart_button"
+                        android:onClick="add_to_list"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+<android.support.v7.widget.CardView
+
+                android:id="@+id/cv8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="7"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/tandoorichicken_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/tandoorichicken" />
+
+                    <TextView
+                        android:id="@+id/tandoorichicken_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/tandoorichicken_photo"
+                        android:text="Tandoori chicken cheese"
+						android:textStyle="bold"
+                        android:textColor="@color/dark_black"
+                        android:fontFamily="@font/stan"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tandoorichicken_price"
+                        android:fontFamily="@font/gatholic"
+                        android:textColor="@color/colorAccent"
+                        android:text="Rs 120"
+                        android:layout_toRightOf="@id/tandoorichicken_photo"
+                        android:layout_below="@id/tandoorichicken_textView"
+                        />
+
+                    <Button
+                        android:id="@+id/tandoorichicken_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/tandoorichicken_button"
+                        android:layout_marginLeft="80dp"
+
+                        android:layout_toLeftOf="@id/tandoorichicken_button"
+                        android:background="@drawable/dlt"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/tandoorichicken_button"
+                        android:layout_width="40dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/heart_button"
+                        android:onClick="add_to_list"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+<android.support.v7.widget.CardView
+
+                android:id="@+id/cv9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="8"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/bbqchicken_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/bbqchicken" />
+
+                    <TextView
+                        android:id="@+id/bbqchicken_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/bbqchicken_photo"
+                        android:text="BBQ chicken sandwich"
+						android:textStyle="bold"
+                        android:textColor="@color/dark_black"
+                        android:fontFamily="@font/stan"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bbqchicken_price"
+                        android:fontFamily="@font/gatholic"
+                        android:textColor="@color/colorAccent"
+                        android:text="Rs 140"
+                        android:layout_toRightOf="@id/bbqchicken_photo"
+                        android:layout_below="@id/bbqchicken_textView"
+                        />
+
+                    <Button
+                        android:id="@+id/bbqchicken_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/bbqchicken_button"
+                        android:layout_marginLeft="80dp"
+
+                        android:layout_toLeftOf="@id/bbqchicken_button"
+                        android:background="@drawable/dlt"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/bbqchicken_button"
+                        android:layout_width="40dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/heart_button"
+                        android:onClick="add_to_list"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+<android.support.v7.widget.CardView
+
+                android:id="@+id/cv10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="9"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/egggrilled_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/egggrilled" />
+
+                    <TextView
+                        android:id="@+id/egggrilled_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/egggrilled_photo"
+                        android:text="Egg grilled sandwich"
+						android:textStyle="bold"
+                        android:textColor="@color/dark_black"
+                        android:fontFamily="@font/stan"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/egggrilled_price"
+                        android:fontFamily="@font/gatholic"
+                        android:textColor="@color/colorAccent"
+                        android:text="Rs 70"
+                        android:layout_toRightOf="@id/egggrilled_photo"
+                        android:layout_below="@id/egggrilled_textView"
+                        />
+
+                    <Button
+                        android:id="@+id/egggrilled_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/egggrilled_button"
+                        android:layout_marginLeft="80dp"
+
+                        android:layout_toLeftOf="@id/egggrilled_button"
+                        android:background="@drawable/dlt"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/egggrilled_button"
+                        android:layout_width="40dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/heart_button"
+                        android:onClick="add_to_list"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+<android.support.v7.widget.CardView
+
+                android:id="@+id/cv11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="10"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/breadomelette_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/breadomelette" />
+
+                    <TextView
+                        android:id="@+id/breadomelette_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/breadomelette_photo"
+                        android:text="Bread omellete sandwich"
+						android:textStyle="bold"
+                        android:textColor="@color/dark_black"
+                        android:fontFamily="@font/stan"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/breadomelette_price"
+                        android:fontFamily="@font/gatholic"
+                        android:textColor="@color/colorAccent"
+                        android:text="Rs 70"
+                        android:layout_toRightOf="@id/breadomelette_photo"
+                        android:layout_below="@id/breadomelette_textView"
+                        />
+
+                    <Button
+                        android:id="@+id/breadomelette_button_rm"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBaseline="@+id/breadomelette_button"
+                        android:layout_marginLeft="80dp"
+
+                        android:layout_toLeftOf="@id/breadomelette_button"
+                        android:background="@drawable/dlt"
+                        android:gravity="center"
+                        android:onClick="rmv_from_list"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/breadomelette_button"
+                        android:layout_width="40dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/heart_button"
+                        android:onClick="add_to_list"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+        </GridLayout>
+
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/order_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+          android:background="#ea7a66"
+        android:text="Place Order"
+        android:onClick="place_order"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:layout_marginBottom="20dp"/>
+
+
+
+</LinearLayout>

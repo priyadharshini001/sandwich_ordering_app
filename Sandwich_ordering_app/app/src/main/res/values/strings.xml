@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sandwich4u</string>
+    <string name="title_activity_order_details">orderDetails</string>
+    <string name="about">Sandwich4u (sandwich ordering app)</string>
+</resources>
